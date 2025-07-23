@@ -1,32 +1,38 @@
-# Gemma3 Local AI App
+# 🧠 Gemma 3 – Local AI App
 
-![Gemma3 Logo](./Gemma%203.png)
-
-## 🧠 About
-
-**Gemma3 Local AI App** is a lightweight, privacy-first desktop application that lets you run the [Gemma3 model](https://ollama.com/library/gemma3) locally on your PC. Designed with simplicity in mind, this app offers an intuitive UI and system prompt customization — no cloud, no delay, just your own AI running directly on your machine.
-
-It uses [Ollama](https://ollama.com) to run the LLM and a custom Python interface for local interaction. No internet connection required after setup.
+Run the **Gemma 3 AI model** locally on your own machine, with a simple and intuitive UI. No internet required after install.
 
 ---
 
 ## ⚙️ Requirements
 
-To run the Gemma3 Local AI App effectively, your system must meet the following:
-
-- ✅ **Operating System**: Windows 10 or later  
-- 🖥️ **GPU**: Recommended (Ollama uses GPU acceleration if available)  
-- 💾 **Storage**:  
-  - 3.3 GB for the Gemma3 model  
-  - 24 KB for the application files  
-- 🧠 **RAM**: Minimum **4 GB**  
-- 🐍 **Python**: Python 3.10+ (installs dependencies automatically)
+- Windows 10 or 11 (64-bit)
+- A GPU (for running the AI)
+- 4 GB RAM minimum
+- 3.3 GB free disk space (for the AI model)
+- 24 KB free space (for the app itself)
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation (2 Easy Steps)
 
-1. Download and run:
+### ✅ Step 1: Install Python 3.12+
+
+Download and install Python from the official site:  
+- For most Intel/AMD CPUs (64-bit):  
+  👉 [https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe)
+
+> During installation, **make sure to check**:
+> - ✅ Add Python to PATH  
+> - ✅ Install for all users
+
+---
+
+### ✅ Step 2: Install the App
+
+Open **Command Prompt** and run:
 
 ```bash
-python install_windows.py
+git clone https://github.com/XTCooper11/Gemma3-Local-AI-App.git
+cd Gemma3-Local-AI-App
+python Install.py
