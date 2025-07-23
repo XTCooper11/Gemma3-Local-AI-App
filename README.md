@@ -31,6 +31,9 @@ Download and install Python from the official site:
 ### ✅ Step 2: Install the App
 
 Open **Command Prompt** and run:
+### ✅ Step 2: Install and Run the App
+
+Open **Command Prompt** and run:
 
 ```bash
 git clone https://github.com/XTCooper11/Gemma3-Local-AI-App.git
