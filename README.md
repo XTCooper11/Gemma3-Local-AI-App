@@ -58,7 +58,7 @@ Download and install Python for Windows:
 
 1. Right-click the new shortcut and select **Properties**.
 2. Under the **Shortcut** tab, click **Change Icon**.
-3. Click **Browse...** and select `G3.png` (you may need to convert it to `.ico` format using a site like [ConvertICO](https://convertico.com)).
+3. Click **Browse...** and select a icon or your own.
 
 ---
 
