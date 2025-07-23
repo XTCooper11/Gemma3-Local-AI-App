@@ -12,13 +12,13 @@ def run(cmd):
     print(f"\n> {cmd}")
     result = subprocess.run(cmd, shell=True)
     if result.returncode != 0:
-        print(f"❌ Command failed: {cmd}")
+        print(f" Command failed: {cmd}")
         sys.exit(1)
 
 def install_ollama():
-    print("🔧 Installing Ollama...")
+    print(" Installing Ollama...")
     if shutil.which("ollama"):
-        print("✅ Ollama already installed.")
+        print(" Ollama already installed.")
         return
 
     url = "https://ollama.com/download/OllamaSetup.exe"
@@ -27,13 +27,13 @@ def install_ollama():
     run(installer)
 
 def pull_model():
-    print("📥 Pulling gemma3 model...")
+    print("Pulling gemma3 model...")
     run("ollama pull gemma3")
 
 def clone_repo():
-    print("📁 Cloning GitHub repo...")
+    print("Cloning GitHub repo...")
     if os.path.exists(LOCAL_FOLDER):
-        print(f"⚠️ Folder '{LOCAL_FOLDER}' already exists. Skipping clone.")
+        print(f"Folder '{LOCAL_FOLDER}' already exists. Skipping clone.")
         return
     run(f"git clone {GITHUB_REPO}")
 
@@ -42,7 +42,7 @@ def create_windows_shortcut():
         import pythoncom
         from win32com.shell import shell, shellcon
     except ImportError:
-        print("❌ pywin32 is required for shortcut creation. Installing now...")
+        print(" pywin32 is required for shortcut creation. Installing now...")
         run(f"{sys.executable} -m pip install pywin32")
         import pythoncom
         from win32com.shell import shell, shellcon
@@ -65,23 +65,23 @@ def create_windows_shortcut():
     if os.path.exists(icon_path):
         shell_link.SetIconLocation(icon_path, 0)
     else:
-        print("⚠️ G3.ico icon not found; shortcut will use default icon.")
+        print(" G3.ico icon not found; shortcut will use default icon.")
 
     persist_file = shell_link.QueryInterface(pythoncom.IID_IPersistFile)
     persist_file.Save(shortcut_path, 0)
 
-    print(f"✅ Desktop shortcut created at: {shortcut_path}")
+    print(f" Desktop shortcut created at: {shortcut_path}")
 
 def run_app():
     main_py = os.path.join(APP_FOLDER, "main.py")
     if os.path.exists(main_py):
         run(f'"{sys.executable}" "{main_py}"')
     else:
-        print("❌ main.py not found in App/.")
+        print(" main.py not found in App/.")
 
 def main():
     if platform.system() != "Windows":
-        print("❌ This installer is Windows-only.")
+        print(" This installer is Windows-only.")
         sys.exit(1)
 
     install_ollama()
