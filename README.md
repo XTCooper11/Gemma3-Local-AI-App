@@ -1,4 +1,6 @@
 # 🧠 Gemma 3 – Local AI App
+👉 **Visit the official App website:**  
+[Website](https://xtcooper11.github.io/G3-App-Website/)
 
 ![Gemma 3](./Gemma%203.png)
 
